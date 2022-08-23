@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { authService, firebaseInstance } from "../fbInstance";
+import { authService } from "../fbInstance";
 
 function Auth() {
     const [email, setEmail] = useState("");
@@ -37,7 +37,7 @@ function Auth() {
     const toggleAccount = () => setNewAcount((current) => !current);
     const onSocialClick = async(event) => {
         const {
-          target: { name }
+            target: { name }
         } = event;
 
         let provider;
