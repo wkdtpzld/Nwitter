@@ -5,26 +5,37 @@ import { authService } from "fbInstance";
 
 function App() {
   const [init, setInit] = useState(false);
-  const [isLoggedIn, setLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
     authService.onAuthStateChanged(authService.getAuth(), (user) => {
       if (user) {
-        setLoggedIn(true);
         setUserObj(user);
-
-      } else {
-        setLoggedIn(false);
-      };
+      } 
       setInit(true);
     })
   }, [])
 
+  const refreshUser = async() => {
+    const reUser = await authService.getAuth().currentUser;
+
+    setUserObj({
+      displayName: reUser.displayName,
+      uid: reUser.uid,
+      updateProfile: (args) => authService.updateProfile(authService.getAuth().currentUser, {
+        displayName: args
+      })
+    });
+  }
+
   return (
     <>
-      {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={ userObj } /> : "Initializing..."}
-      <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+      {init ? (
+        <AppRouter refreshUser={refreshUser} isLoggedIn={Boolean(userObj)} userObj={userObj} />
+      ) : (
+        "Initializing..."
+      )}
+      {/* <footer>&copy; {new Date().getFullYear()} Nwitter</footer> */}
     </>
   );
 }
