@@ -8,22 +8,33 @@ import Navigation from "./Navigation";
 const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             {isLoggedIn && <Navigation userObj={ userObj } />}
-            <Routes>
+            
                 {isLoggedIn ? (
-                <>
-                    <Route path="/" element={<Home userObj={ userObj } />}></Route>
-                    <Route path="/profile" element={<Profile userObj={ userObj } refreshUser={refreshUser} />}></Route>
-                    <Route path="*" element={<Navigate to="/" />}></Route>
-                </>
+                <div style={{
+                    maxWidth: 890,
+                    width: "100%",
+                    margin: "0 auto",
+                    marginTop: 80,
+                    display: "flex",
+                    justifyContent: "center",
+                }}>
+                    <Routes>
+                        <Route path="/" element={<Home userObj={ userObj } />}></Route>
+                        <Route path="/profile" element={<Profile userObj={ userObj } refreshUser={refreshUser} />}></Route>
+                        <Route path="*" element={<Navigate to="/" />}></Route>
+                    </Routes>
+                </div>
                 ) : (
-                <>
-                    <Route path="/" element={<Auth />}></Route>
-                    <Route path="*" element={<Navigate to="/" />}></Route>
-                </>
+                <div>
+                    <Routes>
+                        <Route path="/" element={<Auth />}></Route>
+                        <Route path="*" element={<Navigate to="/" />}></Route>
+                    </Routes>
+                </div>
                 )}
-            </Routes>
+            
         </Router>
     );
 };

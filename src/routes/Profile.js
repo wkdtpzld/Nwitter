@@ -44,13 +44,14 @@ function Profile({userObj, refreshUser}) {
     });
 
     return (
-        <div>
-            <form onSubmit={onSubmit}>
-                <input type="text" placeholder="Display Name" onChange={onChange} value={newDisplay} />
-                <input type="submit" value="Update Profile" />
+        <div className="container">
+            <form onSubmit={onSubmit} className="profileForm">
+                <input type="text" placeholder="Display Name" onChange={onChange} value={newDisplay} className="formInput" autoFocus />
+                <input type="submit" value="Update Profile" className="formBtn" style={{ marginTop: 10 }}/>
             </form>
-            <h1>Profile</h1>
-            <button onClick={onLogOutClick}>Logout</button>
+            <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+                Log Out
+            </span>
         </div>
     )
 }
