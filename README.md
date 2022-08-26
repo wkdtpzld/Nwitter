@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# React && Firebase 실시간 통신 웹 서비스
+해당 서비스는 gh-pages 를 통해 서비스 되고있습니다.
+https://wkdtpzld.github.io/Nwitter/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+React.js 를 통한 state관리 및 firebase로 백엔드 구성없이 빠르게 구현하였습니다.
 
-In the project directory, you can run:
+----
+# 사용 기술
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/87063105/186850124-dfc74c46-8668-40bd-ac3f-76910a9eb6c3.png)
+![image](https://user-images.githubusercontent.com/87063105/186850194-99e754a7-7ae4-41e7-8558-ea3c2cc84ea6.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 사용 툴
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![nodejs](https://user-images.githubusercontent.com/87063105/186850521-2527c7fe-c070-4300-9b7e-a82fc4bf9bad.png)
+![1_MGcLJS1ZvMFcBA94PXn16Q](https://user-images.githubusercontent.com/87063105/186850865-f3acf0c1-480c-49ca-9b83-4b3837309577.png)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 구현한 부분 
 
-### `npm run build`
+Firebase 튜토리얼을 통한 OAuth 로그인
+실시간 통신을 통한 CRD 구현
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firebase 실시간 통신
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React.js state && Router 관리
